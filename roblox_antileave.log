@@ -1,0 +1,134 @@
+2025-07-06 12:22:01,983 - INFO - Starting Roblox disconnection monitoring...
+2025-07-06 12:22:01,983 - INFO - Monitoring game: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 12:23:09,508 - INFO - Monitoring stopped by user
+2025-07-06 12:23:09,508 - INFO - Monitoring stopped
+2025-07-06 12:53:12,807 - INFO - Starting Roblox disconnection monitoring...
+2025-07-06 12:53:12,807 - INFO - Monitoring game: https://www.roblox.com/share?code=7e4aa4d408922246b723d05fd092cbda&type=Server
+2025-07-06 12:53:13,217 - INFO - Roblox process not found - possible disconnection
+2025-07-06 12:53:13,217 - WARNING - Disconnection detected!
+2025-07-06 12:53:13,217 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 12:53:13,219 - INFO - Reconnecting to: https://www.roblox.com/share?code=7e4aa4d408922246b723d05fd092cbda&type=Server
+2025-07-06 12:53:16,269 - WARNING - Play button image 'play_button.png' not found
+2025-07-06 12:53:16,269 - INFO - Reconnection attempt completed
+2025-07-06 12:53:56,330 - INFO - Roblox process not found - possible disconnection
+2025-07-06 12:53:56,330 - WARNING - Disconnection detected!
+2025-07-06 12:53:56,331 - INFO - Attempting reconnection (attempt 2)
+2025-07-06 12:53:56,332 - INFO - Reconnecting to: https://www.roblox.com/share?code=7e4aa4d408922246b723d05fd092cbda&type=Server
+2025-07-06 12:53:59,352 - WARNING - Play button image 'play_button.png' not found
+2025-07-06 12:53:59,352 - INFO - Reconnection attempt completed
+2025-07-06 12:54:04,262 - INFO - Monitoring stopped by user
+2025-07-06 12:54:04,262 - INFO - Monitoring stopped
+2025-07-06 12:59:24,184 - INFO - Starting Roblox disconnection monitoring...
+2025-07-06 12:59:24,184 - INFO - Monitoring game: https://www.roblox.com/share?code=7e4aa4d408922246b723d05fd092cbda&type=Server
+2025-07-06 12:59:24,622 - INFO - Roblox process not found - possible disconnection
+2025-07-06 12:59:24,623 - WARNING - Disconnection detected!
+2025-07-06 12:59:24,623 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 12:59:24,625 - INFO - Reconnecting to: https://www.roblox.com/share?code=7e4aa4d408922246b723d05fd092cbda&type=Server
+2025-07-06 12:59:27,670 - WARNING - Could not find play button on screen: PyAutoGUI was unable to import pyscreeze. (This is likely because you're running a version of Python that Pillow (which pyscreeze depends on) doesn't support currently.) Please install this module to enable the function you tried to call.
+2025-07-06 12:59:27,671 - INFO - Reconnection attempt completed
+2025-07-06 13:00:42,942 - INFO - Disconnection detected in window: Roblox Client Reconnect Script - Google Chrome
+2025-07-06 13:00:42,942 - WARNING - Disconnection detected!
+2025-07-06 13:00:42,943 - INFO - Attempting reconnection (attempt 2)
+2025-07-06 13:00:42,945 - INFO - Reconnecting to: https://www.roblox.com/share?code=7e4aa4d408922246b723d05fd092cbda&type=Server
+2025-07-06 13:00:45,974 - WARNING - Could not find play button on screen: PyAutoGUI was unable to import pyscreeze. (This is likely because you're running a version of Python that Pillow (which pyscreeze depends on) doesn't support currently.) Please install this module to enable the function you tried to call.
+2025-07-06 13:00:45,975 - INFO - Reconnection attempt completed
+2025-07-06 13:00:51,694 - INFO - Monitoring stopped by user
+2025-07-06 13:00:51,694 - INFO - Monitoring stopped
+2025-07-06 13:01:56,475 - INFO - Starting Roblox disconnection monitoring...
+2025-07-06 13:01:56,475 - INFO - Monitoring game: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:01:56,875 - INFO - Roblox process not found - possible disconnection
+2025-07-06 13:01:56,875 - WARNING - Disconnection detected!
+2025-07-06 13:01:56,876 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:01:56,877 - INFO - Reconnecting to: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:01:59,925 - WARNING - Could not find play button on screen: PyAutoGUI was unable to import pyscreeze. (This is likely because you're running a version of Python that Pillow (which pyscreeze depends on) doesn't support currently.) Please install this module to enable the function you tried to call.
+2025-07-06 13:01:59,925 - INFO - Reconnection attempt completed
+2025-07-06 13:02:12,114 - INFO - Monitoring stopped by user
+2025-07-06 13:02:12,115 - INFO - Monitoring stopped
+2025-07-06 13:05:33,232 - INFO - Starting Roblox disconnection monitoring...
+2025-07-06 13:05:33,232 - INFO - Monitoring game: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:05:33,613 - INFO - Roblox process not found - possible disconnection
+2025-07-06 13:05:33,613 - WARNING - Disconnection detected!
+2025-07-06 13:05:33,613 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:05:33,615 - INFO - Reconnecting to: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:05:36,660 - WARNING - Could not find play button on screen: PyAutoGUI was unable to import pyscreeze. (This is likely because you're running a version of Python that Pillow (which pyscreeze depends on) doesn't support currently.) Please install this module to enable the function you tried to call.
+2025-07-06 13:05:36,660 - INFO - Reconnection attempt completed
+2025-07-06 13:05:45,719 - INFO - Monitoring stopped by user
+2025-07-06 13:05:45,719 - INFO - Monitoring stopped
+2025-07-06 13:11:15,445 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:11:15,446 - INFO - Reconnecting to: https://www.roblox.com/share?code=test&type=Server
+2025-07-06 13:11:18,698 - WARNING - Image recognition failed: 
+2025-07-06 13:12:20,817 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:12:20,817 - INFO - Reconnecting to: https://www.roblox.com/share?code=7e4aa4d408922246b723d05fd092cbda&type=Server
+2025-07-06 13:12:24,139 - INFO - Clicked play button
+2025-07-06 13:14:30,941 - INFO - Starting Roblox disconnection monitoring...
+2025-07-06 13:14:30,941 - INFO - Monitoring game: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:14:30,943 - WARNING - Image recognition test failed: No module named 'PIL'
+2025-07-06 13:14:30,943 - INFO - Image recognition not available - will use Enter key as fallback
+2025-07-06 13:14:31,330 - INFO - Roblox process not found - possible disconnection
+2025-07-06 13:14:31,330 - WARNING - Disconnection detected!
+2025-07-06 13:14:31,331 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:14:31,333 - INFO - Reconnecting to: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:14:34,380 - WARNING - Image recognition not available (pyscreeze/Pillow issue). Skipping play button detection.
+2025-07-06 13:14:34,380 - INFO - Attempting alternative: pressing Enter key after delay
+2025-07-06 13:14:36,482 - INFO - Reconnection attempt completed
+2025-07-06 13:14:48,265 - INFO - Monitoring stopped by user
+2025-07-06 13:14:48,265 - INFO - Monitoring stopped
+2025-07-06 13:14:54,033 - INFO - Starting Roblox disconnection monitoring...
+2025-07-06 13:14:54,033 - INFO - Monitoring game: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:14:54,034 - WARNING - Image recognition test failed: No module named 'PIL'
+2025-07-06 13:14:54,034 - INFO - Image recognition not available - will use Enter key as fallback
+2025-07-06 13:14:54,413 - INFO - Roblox process not found - possible disconnection
+2025-07-06 13:14:54,413 - WARNING - Disconnection detected!
+2025-07-06 13:14:54,413 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:14:54,415 - INFO - Reconnecting to: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:14:57,485 - WARNING - Image recognition not available (pyscreeze/Pillow issue). Skipping play button detection.
+2025-07-06 13:14:57,486 - INFO - Attempting alternative: pressing Enter key after delay
+2025-07-06 13:14:59,588 - INFO - Reconnection attempt completed
+2025-07-06 13:15:02,450 - INFO - Monitoring stopped by user
+2025-07-06 13:15:02,450 - INFO - Monitoring stopped
+2025-07-06 13:15:31,525 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:15:31,526 - INFO - Reconnecting to: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:15:34,891 - INFO - Clicked play button
+2025-07-06 13:15:40,783 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:15:40,784 - INFO - Reconnecting to: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:15:44,072 - INFO - Clicked play button
+2025-07-06 13:16:18,152 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:16:18,152 - INFO - Reconnecting to: https://python -c "from main import RobloxAntiLeave; import logging; logging.basicConfig(level=logging.INFO); anti_leave = RobloxAntiLeave(); print('Testing reconnection logic...'); anti_leave.last_game_url = 'https://www.roblox.com/games/126884695634066/Grow-a-Garden'; success = anti_leave.reconnect_to_game(); print(f'Reconnection test completed: {success}')"
+2025-07-06 13:16:21,343 - WARNING - Image recognition failed: 
+2025-07-06 13:16:26,922 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:16:26,922 - INFO - Reconnecting to: https://python -c "from main import RobloxAntiLeave; import logging; logging.basicConfig(level=logging.INFO); anti_leave = RobloxAntiLeave(); print('Testing reconnection logic...'); anti_leave.last_game_url = 'https://www.roblox.com/games/126884695634066/Grow-a-Garden'; success = anti_leave.reconnect_to_game(); print(f'Reconnection test completed: {success}')"
+2025-07-06 13:16:30,109 - WARNING - Image recognition failed: 
+2025-07-06 13:16:41,432 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:16:41,432 - INFO - Reconnecting to: https://python -c "from main import RobloxAntiLeave; import logging; logging.basicConfig(level=logging.INFO); anti_leave = RobloxAntiLeave(); print('Testing reconnection logic...'); anti_leave.last_game_url = 'https://www.roblox.com/games/126884695634066/Grow-a-Garden'; success = anti_leave.reconnect_to_game(); print(f'Reconnection test completed: {success}')"
+2025-07-06 13:16:44,674 - WARNING - Image recognition failed: 
+2025-07-06 13:16:55,373 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:16:55,399 - INFO - Reconnecting to: https://python -c "from main import RobloxAntiLeave; import logging; logging.basicConfig(level=logging.INFO); anti_leave = RobloxAntiLeave(); print('Testing reconnection logic...'); anti_leave.last_game_url = 'https://www.roblox.com/games/126884695634066/Grow-a-Garden'; success = anti_leave.reconnect_to_game(); print(f'Reconnection test completed: {success}')"
+2025-07-06 13:16:58,497 - WARNING - Image recognition not available (pyscreeze/Pillow issue). Skipping play button detection.
+2025-07-06 13:16:58,497 - INFO - Attempting alternative: pressing Enter key after delay
+2025-07-06 13:18:23,909 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:18:23,910 - INFO - Reconnecting to: https://www.roblox.com/share?code=test&type=Server
+2025-07-06 13:18:27,136 - WARNING - Image recognition failed: 
+2025-07-06 13:18:55,717 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:18:55,718 - INFO - Reconnecting to: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:18:59,026 - INFO - Clicked play button
+2025-07-06 13:20:49,307 - INFO - Starting Roblox disconnection monitoring...
+2025-07-06 13:20:49,308 - INFO - Monitoring game: https://www.roblox.com/games/126884695634066/Grow-a-Garden
+2025-07-06 13:20:49,309 - WARNING - Image recognition test failed: No module named 'PIL'
+2025-07-06 13:20:49,309 - INFO - Image recognition not available - will use Enter key as fallback
+2025-07-06 13:20:53,630 - INFO - Monitoring stopped by user
+2025-07-06 13:20:53,630 - INFO - Monitoring stopped
+2025-07-06 13:26:32,911 - INFO - Starting Roblox disconnection monitoring...
+2025-07-06 13:26:32,911 - INFO - Monitoring game: https://www.roblox.com/share?code=test123&type=Server
+2025-07-06 13:26:32,957 - INFO - Image recognition available - automatic play button clicking enabled
+2025-07-06 13:26:33,524 - INFO - Roblox process not found - possible disconnection
+2025-07-06 13:26:33,524 - WARNING - Disconnection detected!
+2025-07-06 13:26:33,525 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:26:33,527 - INFO - Reconnecting to: https://www.roblox.com/share?code=CODE&type=Server
+2025-07-06 13:26:36,765 - WARNING - Image recognition failed: ImageNotFoundException: 
+2025-07-06 13:26:36,765 - WARNING - Empty error - this might be a silent failure in image processing
+2025-07-06 13:26:36,767 - INFO - Reconnection attempt completed
+2025-07-06 13:26:48,041 - INFO - Monitoring stopped by user
+2025-07-06 13:26:48,041 - INFO - Monitoring stopped
+2025-07-06 13:31:46,254 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 13:31:46,288 - INFO - Reconnecting to: https://www.roblox.com/share?code=CODE&type=Server
+2025-07-06 13:31:49,341 - INFO - Private server URL will automatically open Roblox and join the server
