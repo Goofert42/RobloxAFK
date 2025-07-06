@@ -2,11 +2,7 @@
 
 ## Getting Started
 
-1. **Double-click `run_antileave.bat`** - This will automatically install dependencies and start the script
-   
-   OR
-   
-   **Run manually:**
+1. Run the script for the first time:
    ```bash
    pip install -r requirements.txt
    python main.py
