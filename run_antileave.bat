@@ -11,6 +11,10 @@ if errorlevel 1 (
     exit /b 1
 )
 
+python -m venv .venv
+
+venv\Scripts\activate
+
 REM Check if requirements are installed
 echo Checking dependencies...
 pip show pygetwindow >nul 2>&1
