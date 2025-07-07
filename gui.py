@@ -17,7 +17,7 @@ import os
 class ModernGUI:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("Roblox Anti-Leave")
+        self.root.title("Roblox AFK")
         self.root.geometry("600x900")
         self.root.resizable(True, True)
         
