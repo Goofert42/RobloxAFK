@@ -132,3 +132,13 @@
 2025-07-06 13:31:46,254 - INFO - Attempting reconnection (attempt 1)
 2025-07-06 13:31:46,288 - INFO - Reconnecting to: https://www.roblox.com/share?code=CODE&type=Server
 2025-07-06 13:31:49,341 - INFO - Private server URL will automatically open Roblox and join the server
+2025-07-06 21:24:24,962 - INFO - Starting Roblox disconnection monitoring...
+2025-07-06 21:24:24,963 - INFO - Monitoring private server: https://www.roblox.com/share?code=7e4aa4d408922246b723d05fd092cbda&type=Server
+2025-07-06 21:33:16,618 - INFO - Roblox process not found - possible disconnection
+2025-07-06 21:33:16,618 - WARNING - Disconnection detected!
+2025-07-06 21:33:16,618 - INFO - Attempting reconnection (attempt 1)
+2025-07-06 21:33:16,658 - INFO - Reconnecting to: https://www.roblox.com/share?code=7e4aa4d408922246b723d05fd092cbda&type=Server
+2025-07-06 21:33:19,704 - INFO - Private server URL will automatically open Roblox and join the server
+2025-07-06 21:33:19,704 - INFO - Reconnection attempt completed
+2025-07-07 16:13:48,102 - INFO - Monitoring stopped by user
+2025-07-07 16:13:48,102 - INFO - Monitoring stopped

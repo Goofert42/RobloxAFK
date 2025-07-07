@@ -11,7 +11,7 @@ RECONNECT_DELAY = 10  # seconds to wait after a reconnection attempt
 # Detection settings
 DISCONNECT_INDICATORS = [
     "disconnected",
-    "connection lost", 
+    "connection lost",
     "unable to connect",
     "kicked",
     "error",
@@ -19,7 +19,12 @@ DISCONNECT_INDICATORS = [
     "lost connection",
     "connection failed",
     "network error",
-    "timeout"
+    "timeout",
+    "afk",
+    "idle",
+    "inactive",
+    "you have been removed",
+    "session expired"
 ]
 
 # Roblox window patterns to look for

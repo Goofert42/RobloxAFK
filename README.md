@@ -2,7 +2,22 @@
 
 ## Getting Started
 
-1. Run the script for the first time:
+### Option 1: Modern GUI (Recommended)
+1. **Install dependencies and run GUI**:
+   ```bash
+   pip install -r requirements.txt
+   python gui.py
+   ```
+   Or simply double-click `run_gui.bat`
+
+2. **Enter your private server URL** in the text field
+3. **Click "Start Monitoring"** to begin
+4. **Keep the GUI window open** while playing Roblox
+
+### Option 2: Command Line
+1. **Run the script**:
+   Double click `run_console.bat` or run in terminal:
+
    ```bash
    pip install -r requirements.txt
    python main.py

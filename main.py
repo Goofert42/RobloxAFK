@@ -113,6 +113,7 @@ class RobloxAntiLeave:
 
             # Check window titles for disconnection indicators (if window monitoring is enabled)
             if ENABLE_WINDOW_MONITORING:
+                # First check Roblox-specific windows
                 roblox_windows = self.get_roblox_windows()
                 if not roblox_windows:
                     logger.info("No Roblox windows found - possible disconnection")
@@ -121,8 +122,24 @@ class RobloxAntiLeave:
                 for window in roblox_windows:
                     title = window.title.lower()
                     if any(indicator in title for indicator in self.disconnect_indicators):
-                        logger.info(f"Disconnection detected in window: {window.title}")
+                        logger.info(f"Disconnection detected in Roblox window: {window.title}")
                         return True
+
+                # Also check ALL windows for disconnection popups (like AFK kick dialogs)
+                try:
+                    all_windows = gw.getAllWindows()
+                    for window in all_windows:
+                        if window.title:
+                            title = window.title.lower()
+                            # Look for disconnection indicators in any window
+                            if any(indicator in title for indicator in self.disconnect_indicators):
+                                # Check if it's likely a Roblox-related popup or generic disconnection
+                                if (any(roblox_keyword in title for roblox_keyword in ['roblox', 'disconnect', 'kick', 'afk']) or
+                                    any(strong_indicator in title for strong_indicator in ['disconnected', 'kicked', 'removed', 'session expired'])):
+                                    logger.info(f"Disconnection popup detected: {window.title}")
+                                    return True
+                except Exception as e:
+                    logger.warning(f"Error checking all windows for popups: {e}")
 
             return False
 
