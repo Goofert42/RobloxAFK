@@ -7,24 +7,20 @@ Modify these settings to customize the behavior of the script.
 CHECK_INTERVAL = 5  # seconds between disconnection checks
 MAX_RECONNECT_ATTEMPTS = 3  # maximum number of reconnection attempts
 RECONNECT_DELAY = 10  # seconds to wait after a reconnection attempt
+DISCONNECTION_COOLDOWN = 30  # seconds to wait before detecting disconnection again (prevents spam)
 
-# Detection settings
+# Detection settings - More conservative to prevent false positives
 DISCONNECT_INDICATORS = [
     "disconnected",
     "connection lost",
     "unable to connect",
-    "kicked",
-    "error",
-    "reconnect",
+    "kicked for being afk",
+    "kicked for inactivity",
     "lost connection",
     "connection failed",
-    "network error",
-    "timeout",
-    "afk",
-    "idle",
-    "inactive",
+    "session expired",
     "you have been removed",
-    "session expired"
+    "removed from the game"
 ]
 
 # Roblox window patterns to look for

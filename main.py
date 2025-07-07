@@ -22,6 +22,7 @@ except ImportError:
     CHECK_INTERVAL = 5
     MAX_RECONNECT_ATTEMPTS = 3
     RECONNECT_DELAY = 10
+    DISCONNECTION_COOLDOWN = 30
     DISCONNECT_INDICATORS = ["disconnected", "connection lost", "unable to connect", "kicked", "error", "reconnect", "lost connection"]
     ROBLOX_PATTERNS = [r"Roblox", r".*- Roblox", r"Roblox Player"]
     ROBLOX_PROCESS_NAMES = ["robloxplayerbeta.exe", "roblox.exe", "robloxplayer.exe"]
@@ -76,6 +77,12 @@ class RobloxAntiLeave:
         self.roblox_patterns = ROBLOX_PATTERNS
         self.roblox_process_names = ROBLOX_PROCESS_NAMES
 
+        # State tracking to prevent spam detection
+        self.last_disconnection_time = 0
+        self.disconnection_cooldown = DISCONNECTION_COOLDOWN
+        self.was_connected = False
+        self.consecutive_disconnects = 0
+
     def get_roblox_windows(self) -> List:
         """Get all Roblox-related windows"""
         roblox_windows = []
@@ -106,40 +113,70 @@ class RobloxAntiLeave:
     def detect_disconnection(self) -> bool:
         """Detect if user has been disconnected from Roblox"""
         try:
-            # Check if Roblox is still running (if process monitoring is enabled)
-            if ENABLE_PROCESS_MONITORING and not self.is_roblox_running():
-                logger.info("Roblox process not found - possible disconnection")
+            import time
+            current_time = time.time()
+
+            # Cooldown period to prevent spam detection
+            if current_time - self.last_disconnection_time < self.disconnection_cooldown:
+                return False
+
+            # Check if Roblox is running first
+            roblox_running = True
+            if ENABLE_PROCESS_MONITORING:
+                roblox_running = self.is_roblox_running()
+
+            # Check for Roblox windows
+            roblox_windows = []
+            if ENABLE_WINDOW_MONITORING:
+                roblox_windows = self.get_roblox_windows()
+
+            # Determine current connection state
+            currently_connected = roblox_running and (not ENABLE_WINDOW_MONITORING or len(roblox_windows) > 0)
+
+            # If we were connected and now we're not, that's a disconnection
+            if self.was_connected and not currently_connected:
+                logger.info("Disconnection detected: Roblox was running but now stopped/closed")
+                self.last_disconnection_time = current_time
+                self.was_connected = False
+                self.consecutive_disconnects += 1
                 return True
 
-            # Check window titles for disconnection indicators (if window monitoring is enabled)
-            if ENABLE_WINDOW_MONITORING:
-                # First check Roblox-specific windows
-                roblox_windows = self.get_roblox_windows()
-                if not roblox_windows:
-                    logger.info("No Roblox windows found - possible disconnection")
-                    return True
+            # Update connection state
+            if currently_connected:
+                self.was_connected = True
+                self.consecutive_disconnects = 0
 
+            # Only check for specific disconnection popups if we think we're connected
+            if currently_connected and ENABLE_WINDOW_MONITORING:
+                # Check Roblox windows for disconnection messages
                 for window in roblox_windows:
                     title = window.title.lower()
-                    if any(indicator in title for indicator in self.disconnect_indicators):
-                        logger.info(f"Disconnection detected in Roblox window: {window.title}")
+                    # Only check for very specific disconnection indicators
+                    specific_indicators = ['disconnected', 'kicked', 'connection lost', 'session expired']
+                    if any(indicator in title for indicator in specific_indicators):
+                        logger.info(f"Disconnection message in Roblox window: {window.title}")
+                        self.last_disconnection_time = current_time
+                        self.was_connected = False
+                        self.consecutive_disconnects += 1
                         return True
 
-                # Also check ALL windows for disconnection popups (like AFK kick dialogs)
+                # Check for Roblox-specific popup windows (very conservative)
                 try:
                     all_windows = gw.getAllWindows()
                     for window in all_windows:
-                        if window.title:
+                        if window.title and 'roblox' in window.title.lower():
                             title = window.title.lower()
-                            # Look for disconnection indicators in any window
-                            if any(indicator in title for indicator in self.disconnect_indicators):
-                                # Check if it's likely a Roblox-related popup or generic disconnection
-                                if (any(roblox_keyword in title for roblox_keyword in ['roblox', 'disconnect', 'kick', 'afk']) or
-                                    any(strong_indicator in title for strong_indicator in ['disconnected', 'kicked', 'removed', 'session expired'])):
-                                    logger.info(f"Disconnection popup detected: {window.title}")
-                                    return True
+                            # Only check for very specific and strong disconnection indicators
+                            if ('disconnected' in title or
+                                ('kicked' in title and 'afk' in title) or
+                                'session expired' in title):
+                                logger.info(f"Roblox disconnection popup: {window.title}")
+                                self.last_disconnection_time = current_time
+                                self.was_connected = False
+                                self.consecutive_disconnects += 1
+                                return True
                 except Exception as e:
-                    logger.warning(f"Error checking all windows for popups: {e}")
+                    logger.debug(f"Error checking popup windows: {e}")
 
             return False
 
@@ -223,6 +260,11 @@ class RobloxAntiLeave:
                     webbrowser.open('https://www.roblox.com/')
 
             self.reconnect_attempts += 1
+
+            # Reset disconnection state after successful reconnection attempt
+            import time
+            self.last_disconnection_time = time.time()
+
             return True
 
         except Exception as e:
@@ -251,6 +293,12 @@ class RobloxAntiLeave:
         self.last_game_url = game_url
         self.monitoring = True
         self.reconnect_attempts = 0
+
+        # Reset disconnection state when starting
+        import time
+        self.last_disconnection_time = 0
+        self.was_connected = True  # Assume connected when starting
+        self.consecutive_disconnects = 0
 
         logger.info("Starting Roblox disconnection monitoring...")
         if game_url:
